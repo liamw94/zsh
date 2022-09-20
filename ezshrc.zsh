@@ -120,3 +120,26 @@ plugins=(
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+alias myip="wget -qO- https://wtfismyip.com/text"	# quickly show external ip address
+alias l="ls -lah"
+alias e="exit"
+
+
+# CUSTOM FUNCTIONS
+
+# cheat sheets (github.com/chubin/cheat.sh), find out how to use commands
+# example 'cheat tar'
+# for language specific question supply 2 args first for language, second as the question
+# eample: cheat python3 execute external program
+cheat() {
+    if [ "$2" ]; then
+        curl "https://cheat.sh/$1/$2+$3+$4+$5+$6+$7+$8+$9+$10"
+    else
+        curl "https://cheat.sh/$1"
+    fi
+}
+
+speedtest() {
+    curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -
+}
