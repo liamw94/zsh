@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH=$HOME/.config/ezsh/oh-my-zsh
 unsetopt BEEP
 
 # Set name of the theme to load --- if set to "random", it will
@@ -92,8 +92,6 @@ plugins=(
     extract
     z
 )
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
